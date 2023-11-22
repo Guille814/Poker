@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Definir las cartas del jugador
+const carta1 = prompt("Ingresa el número de la primera carta: ");
+const palo1 = prompt("Ingresa el palo de la primera carta: ");
+const carta2 = prompt("Ingresa el número de la segunda carta: ");
+const palo2 = prompt("Ingresa el palo de la segunda carta: ");
+
+// Función para calcular la probabilidad de obtener una pareja
+function calcularProbabilidadParaPareja() {
+  const cartasRestantes = 52 - 2; // 52 cartas en total, menos las dos que ya tenemos
+  const cartasDelMismoRango = 4; // Hay 4 cartas de cada rango en una baraja estándar
+
+  const probabilidad = (cartasDelMismoRango / cartasRestantes) * 100;
+
+  return probabilidad.toFixed(2);
+}
+
+// Calcular la probabilidad
+const probabilidadPareja = calcularProbabilidadParaPareja();
+
+// Mostrar el resultado
+console.log(`Tienes una probabilidad del ${probabilidadPareja}% de obtener una pareja en esta mano.`);
+    </script>
+</body>
+</html>
